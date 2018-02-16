@@ -1,0 +1,55 @@
+git status - To see the status of the Git (current state of the project)
+git init   - To initialize a Git repository
+
+staged:    - Files are ready to be committed, (files are not in the repository yet)
+unstaged:  - Files with changes that have not been prepared to be committed
+untracked: - Files aren't tracked by Git yet.This usually indicates a newly created file
+deleted:   - File has been deleted and is waiting to be removed from Git
+
+git add <filename>   - To tell Git to start tracking changes made to <filename>, Need to add it to the staging area
+git reset <filename> - To remove file(s) from the staging area
+git add -A .  - To add all files in the current directory, where -A means 'even file deletions are included'
+
+//git rm --cached <file>  - to unstage
+//git reset HEAD <file>   - to unstage
+git commit -m "Message describing what we've changed" - To store staged changes
+//default local branch - master
+//directory, repository
+//staging area, commit
+//wildcards: 
+git add '*.txt'  - To add all files with the specified extensions (with quotes)
+git log --summary  - To see more info for each commit
+git log  - changes and order of commit
+//git remote:
+git remote add origin https://github.com/username/repository_name.git  - To add remote repository
+//remote name - origin
+//repository URL - https://github.com/username/repository_name.git
+//Git Hooks
+git push -u origin master  - Tells where to put our commits
+//git stash - To stash the changes
+//git stash apply  - To re-apply the changes after pull
+git pull origin master  - To pull down new changes made by other people(new commits, pushes)
+//HEAD - pointer which holds position within all your different commits, by default it points to most recent commit (to reference without SHA)
+git diff - diff btn last commit, prev
+git diff HEAD - diff of most recent commit(HEAD)
+git add fold/file 
+git diff --staged - to see changes you just staged
+git checkout -- <filename>  - Files can be changed back to how they were at the last commit
+//Branching
+git branch <branchname> - To create new branch
+git branch - To see diff branches
+git checkout <branchname> - To switch between branch
+git checkout -b <new_branchname> - To checkout and create new branch
+git rm -r <folder>  - recursicely remove all folders and files in the specified directory
+git rm '*.extension' - To remove all same files
+git commit -am "message"  - commits with -a(auto removes deleted files)
+//pull requests: before hosting the repository, it allows the boss of the project to look through your changes and make comments before deciding to merge in the change
+git merge <branch>  - Tells to merge the specified branch with the current branch
+//merge conflict
+git branch -d <branch>  - To delete a branch
+//--force or (-f)  - forcesibly remove
+//-D combines -d and -f
+git push - Pushing the repository into github
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+git remote - list the remote names
+git remote remove <name> - to remove remote
