@@ -1,2 +1,2 @@
 # Documentation
-Tutorials, notes, docs, etc
+Tutorials, notes, docs, cheatsheets, etc
