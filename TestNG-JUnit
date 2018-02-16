@@ -1,0 +1,18 @@
+TestNG: (location: Downloads\Testing\TestNG)
+javac TestNGSimpleTest.java
+java -cp "C:\Users\santhosh.kumar\Downloads\Testing\TestingLibrary\*;" org.testng.TestNG testng.xml
+arg1: -cp for classpath for library/jars and test classes
+arg2: "<classpath>;<2>;<3>"
+arg3: TestNG class
+arg4: testng xml file (should be located in TestNG location: Downloads\Testing\TestNG)
+need testng.jar and jcommander.jar
+TESTNG_HOME - testng.jar path
+CLASSPATH - %CLASSPATH%;%TESTNG_HOME%\<testngname.jar|*>;.
+and env for jcommander.jar
+. in classpath
+
+JUnit: (location: Downloads\Testing\JUnit)
+javac TestJunit.java TestRunner.java
+java TestRunner
+should add JUNIT_HOME as junit.jar file path and CLASSPATH as %CLASSPATH%;%JUNIT_HOME%\<junitname.jar|*>;. in environment variables
+need junit-<version>.jar
