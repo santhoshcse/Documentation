@@ -1,0 +1,35 @@
+#To create login name for SQL Server using T-SQL Script:
+Create login <loginName> with password='<passWord>'
+
+#To create database using T-SQL Script:
+Create database <dbName>
+#Restore Database:
+Restore Database <dbName> from disk = '<Backup file location + file name>'
+
+#To select database:
+use <dbName>
+#To select Backup History:
+Exec use <dbName> and Select * from backupset
+
+#To remove database:
+Drop database <dbName>
+
+#To backup database or log or differential:
+1.Backup database <dbName> to disk = '<Backup file location + file name>'
+2.Backup log <dbName> to disk = '<Backup file location + file name>'
+3.Backup database <dbName> to disk = '<Backup file location + file name>' with differential
+(dbName_ + [Full.bak | diff.bak | log.trn])
+
+#Restoring:
+Restore Database <dbName> from disk = '<Backup file location + file name>' with replace
+#Path not exists:
+Restore Database <dbName> from disk = '<Backup file location + file name>' with move '<dbName>' to '<New file location + file name(.mdf)>', move '<dbName_log>' to '<new file location + dbName_log(.ldf)>'
+
+#to create user:
+Create user <userName> for login <loginName>
+
+#To give permission to user:
+use <dbName>
+//Go
+Grand <Permission name> on <Object name> to <username\principle>
+
