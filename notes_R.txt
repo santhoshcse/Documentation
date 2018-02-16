@@ -1,0 +1,125 @@
+#vector
+val <- 5  #assignment
+c(a, b, c, ) #combine
+val1 <- c(1, 2, 3, 4, 5) #multi object (1, 's', 5.5, "santhosh", TRUE, T)
+val1 <- c(1:10)
+letters, LETTERS
+length(var)
+sort(var)
+sample(limit or data, length, (replace=val)) #random
+mean(var)
+median(var)
+sd(var)
+plot(a, b, c, ...)
+hist(var, )
+summary(var)
+max(var)
+min(var)
+which(cond) #position
+is.vector(var) # boolean result
+#matrix
+dim(var_ToBeMatrix) <- c(row, col) #dimension_change 
+[] # indecing, starts from 0
+tail(var)
+head(var)
+str(var) #structuring the vector
+set.seed(val)
+typeof(var) #obj
+paste(start, range or seq, sep=val) #sep-seperate val
+c() or NULL #null
+seq(start, end, incr or decr)
+rep(data, times)
+source("path") # .R file
+sum(var)
+?cmd #help or doc
+fix(var) #excel view, can edit
+t(var) #transpose
+-> #assign
+"val" -> var[row, col]  #assign
+#should be in same type ##ex: numeric and character -> character
+#list
+list(a, b, c, ...)
+[[val]] #index , has single dimension [val,] (row only)
+data.frame(a, b, ...)
+$ #selection in dataFrame
+dataFrameVar$colName or [, val] #col
+dataFrameVar[val, ]   #row
+var <- function(arg1, arg2, ...){ def }
+var(arg1, arg2, ...) #calling
+funVar #to get func def
+##var, names can be of any type (num, char, logical, fun, vector, combine, list, seq, matrix, dataframe, etc)
+barplot(vars)
+boxplot(vars)
+pie(vars)
+rnorm(vars or val) #random func
+pnorm(vars)
+qnorm(vars)
+dnorm(vars)
+//--------------------------------------------------------
+#workspace - contains sessions
+#namespace - contains objects
+#built-in, user-defined, other-source(downloaded)
+#package - contains modules, libraries, functions, .r files
+getwd() #to get working directory
+setwd("Path") #to set working directory
+dir() #to get directory content(files in the directory)
+ls() #to get the objects(content) of the workspace
+pi #pi value
+rm(object or var) #to remove the object or variable
+remove(var) #rm(var)
+data() #to get some built-in datasets for practice
+names(dataset) #to get names or cols or objects of the dataset
+attach(dataset) #to get include the dataset to the namespace to access objects and use $ to access
+require(object) #use inside functions
+detach() #to remove all the names from the workspace
+save(objects, file="name.rda") #to save the objects or data in the file for later use
+load() #to load the saved objects in to R
+rm(list=ls()) #to empty the namespace
+= #assignment
+search() #to search the packages in the search path
+#to download a package (doesn't affect the search path):
+1. install.packages("name")
+2. select the mirror to download in CRAN
+#to include in search path
+library("name")
+points(logitude, latitude)
+points(logitude, latitude, pch=num, col="val")
+history() #to get all commands that we are worked
+save.image() #to save workspace as .RData   <==> file -> save workspace
+load() #to recall the saved workspaces      <==> file -> load workspace
+save.image(file="name.RData")
+load("name.RData")
+builtins() #all built-in's
+scatterplot(a, b, c, ..)
+//---------------------------------------------------------
+#Downloading and importing data in R
+read.table("clipboard", header=T, sep="\t") #reads data from clipboard
+#var-names doesn't start with number
+#we can add names like, 
+names(var) <- objects
+#find()
+#R can read data from sources like excel, SAS, SPSS, csv, etc
+read.table(file="name", header=T or F, sep="char") #reads data from file
+#negative Indexing:
+var <- var[(range or val) row, col] #to remove the specified row and col
+#read.table() uses scan() to read the data from source
+#and it doesn't read missing columns, it shows warning
+read.table(1, 2, 3, fill=T) #set arg 4 to fill the empty columns
+read.csv() # for reading the csv files
+read.fwf() # for fixed width format files
+readLines("source or path-file or url") #it will read objects one line at a time
+~ #used in charts as with an argument to show the dependencies
+install.packages("Rcurl") #to handle HTTPS and other types of connections
+install.packages("HistData") #
+#web-query
+#R can read HTML file (Parse)
+grep("Pattern", Object) #to search or find the text which matches the given pattern
+Object[grep] #can give result of gerp to the index of the Object
+#TimeStamp
+date() #gets current date
+#API:
+packages:
+twitteR #to handle the twitter API
+sweSCB  #web API of Statistics Sweden
+other Packages: "rOpenGov" website
+#Tools to fix the data : Python, NotePad++ # for one-off analysis
