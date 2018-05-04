@@ -53,3 +53,20 @@ git push - Pushing the repository into github
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 git remote - list the remote names
 git remote remove <name> - to remove remote
+
+//Removing branch
+//local
+git branch -d <branch name>
+git branch -D <branch name>
+//remote
+git push <remote name> --delete <branch name>
+git push -d <remote name> <branch name>
+
+//To find merged and unmerged branches with <master:any> branch
+git branch --merged master
+git branch --no-merged master
+//default:
+git branch --merged
+//To find remote branches which are merged and unmerged with <master:any> branch
+git branch -r --merged master
+git branch -r --no-merged master
