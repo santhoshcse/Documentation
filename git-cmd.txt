@@ -70,3 +70,22 @@ git branch --merged
 //To find remote branches which are merged and unmerged with <master:any> branch
 git branch -r --merged master
 git branch -r --no-merged master
+//All Remote branches
+git branch -r
+
+//HEAD - is Reference Pointer used to point current Branch (in both local and remote)
+git symbolic-ref HEAD
+//master - default branch (in both local and remote)
+//origin - default remote
+
+//To update the refs
+//Delete
+git update-ref -d [refs/notes/origin/commits]/Path
+
+//To remove notes
+git notes remove <commit>
+
+//To Clean-up remote deleted branch
+git remote prune origin
+git remote prune
+git ls-remote
