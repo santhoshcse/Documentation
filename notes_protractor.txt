@@ -1,0 +1,23 @@
+Prerequisites:
+    1. Install Node.js (Link: https://nodejs.org/)
+        NPM (Node Package Manager) will be installed with Node.js
+        Set NPM Path in Environment Variable
+        To check version: use node -v and npm -v
+    2. Install JDK (Link: http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+        Set Java Bin Path in Environment Variable
+    3. Install Protractor Globally using NPM - npm install protractor -g
+        This will install webdriver-manager (which used to start the selenium server for protractor to run)
+        To check version: use protractor --version and webdriver-manager version
+    4. webdriver-manager update - Updates latest drivers for the browsers
+    5. webdriver-manager start  - Starts selenium server in http://localhost:4444/wd/hub
+Supported Browsers:
+    1. chrome
+    2. firefox
+    3. internet explorer
+    4. Microsoft Edge
+    5. safari etc.,
+    Reference Link: https://github.com/angular/protractor/blob/master/docs/browser-support.md
+Files: 
+    1. Config.js (Configuration file) - For Complete Config Reference: https://github.com/angular/protractor/blob/5.3.1/lib/config.ts
+    2. Spec.js (Specification file) - For API Reference of Protractor: http://www.protractortest.org/#/api
+To Run Protractor Test: protractor config.js
