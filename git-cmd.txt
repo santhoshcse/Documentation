@@ -89,3 +89,8 @@ git notes remove <commit>
 git remote prune origin
 git remote prune
 git ls-remote
+
+//To UNDO/Reset Last commit
+git reset HEAD~
+//To Edit last commit message for current commit
+git commit -c ORIG_HEAD
