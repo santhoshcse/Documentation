@@ -94,3 +94,26 @@ git ls-remote
 git reset HEAD~
 //To Edit last commit message for current commit
 git commit -c ORIG_HEAD
+
+//Same Branch
+//scenario:1
+git push origin <branch name>
+status: <branch name> is created in local but not in remote.
+pushing local commits in that branch creates that branch in remote and will push.
+
+//Same Branch
+//scenario:2
+git pull origin <branch name>
+status: <branch name> is created in remote but not in local.
+first create that local branch and make current branch and makes pull.
+case:1
+if you pulled in wrong branch, to undo this:
+git reset --hard ORIG_HEAD
+
+//scenario:3
+you have repo in remote.
+and your local repo is up to date with remote repo.
+and you make changes in local repo (feature).
+you create new branch and make commit that changes in that branch.
+-> if you delete that new branch having commits which are not pushed yet.
+-> those commits will be deleted or the state will be the state which was before that new branch is created.
