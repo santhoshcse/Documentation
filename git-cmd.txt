@@ -117,3 +117,17 @@ and you make changes in local repo (feature).
 you create new branch and make commit that changes in that branch.
 -> if you delete that new branch having commits which are not pushed yet.
 -> those commits will be deleted or the state will be the state which was before that new branch is created.
+
+//sceanrio:4
+create new branch from specific branch
+-> checkout <branch name> from which you want to create new branch
+git checkout -b <new branch> <old branch>
+
+//scenario:5
+merge branch1 with specific branch
+-> checkout <branch name> to which you want to merge branch1
+git merge branch1
+
+//scenario:6
+while performing pull or push, additional commits in dest branch(local/remote), new commits in src(remote/local).
+merge will be happen, if no conflict else confirmation for commits and review will be taken.
