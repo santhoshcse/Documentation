@@ -131,3 +131,14 @@ git merge branch1
 //scenario:6
 while performing pull or push, additional commits in dest branch(local/remote), new commits in src(remote/local).
 merge will be happen, if no conflict else confirmation for commits and review will be taken.
+
+//scenario:7
+creating empty branch with no previous branch
+status: current branch is <A>
+git checkout --orphan  <branch name>
+-> status of the branch will be having files which are not staged from the <A>
+-> to remove those files, use 
+git rm --cached -r .
+-> The reason why you don't see the branch after git checkout --orphan <branch> is because it does not have any commits yet. After the first commit git branch prints the new branch
+-> if you checkout another branch from empty branch (having no commits), then empty branch will removed
+-> you can't checkout empty branch (it will not be available)
