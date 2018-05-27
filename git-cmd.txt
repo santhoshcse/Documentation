@@ -142,3 +142,10 @@ git rm --cached -r .
 -> The reason why you don't see the branch after git checkout --orphan <branch> is because it does not have any commits yet. After the first commit git branch prints the new branch
 -> if you checkout another branch from empty branch (having no commits), then empty branch will removed
 -> you can't checkout empty branch (it will not be available)
+
+//local branch
+//scenario:8
+count of commits in a branch
+git rev-list --count HEAD (current branch)
+git rev-list --count <branch name>
+git rev-list --no-merges --count HEAD or <branch name> (without merge commits)
