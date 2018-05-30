@@ -149,3 +149,15 @@ count of commits in a branch
 git rev-list --count HEAD (current branch)
 git rev-list --count <branch name>
 git rev-list --no-merges --count HEAD or <branch name> (without merge commits)
+
+//local branch
+//scenario:9
+pull latest - local unstaged (assuming that local doesn't have any commits to push to remote)
+status: remote/A have commits A->B->C and local/A have commits A->B + some unstaged files, current local branch is A
+->if you do "git pull <remote> A", it throws error bcos of unstaged files
+->to solve, stash all unstaged files by 
+git checkout -- <files>
+or
+->make commit those changes (after git add <files>); this may leads to merge conflict, if same files have diff data in remote and local commits
+git commit -m "<message>"
+->finally redo "git pull <remote> A"
