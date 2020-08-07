@@ -1,0 +1,44 @@
+Scenario 1:
+Input: 
+In a collection, each document will have an ID and Array of Objects.
+{
+  _id: GUID,
+  id: "100",
+  data: [
+  {
+    change: "2"
+  },
+  {
+    change: "-3"
+  },
+  { etc }
+  ]
+}
+
+Problem description: Find min/max from object array, output ID & info object by matching min/max value with the each object in the array.
+Note: value will be in string type, inside the array of objects.
+Output:
+For each document, there will be an ID and An Object named "info" which is min/max of an array given
+{
+  _id: GUID,
+  id: "100",
+  info: {
+    change: 2 // max
+  }
+}
+
+MongoQuery:
+db.FindMinInArrObject.aggregate(
+[{ "$unwind": "$data" }, 
+ { "$group": {
+     _id: '$id', 
+     min: {
+        $max: { '$toInt': "$data.change" }
+     },
+     info : {$push : "$data"},
+   }
+ },
+ { "$unwind": "$info" }, 
+ { "$match" : { "$expr": { "$eq": [ { '$toInt': "$info.change" }, "$min" ] } } },
+ { "$project": { info: "$info" } }
+]);
