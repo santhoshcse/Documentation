@@ -1,0 +1,136 @@
+{
+   // Use IntelliSense to find out which attributes exist for C# debugging
+   // Use hover for the description of the existing attributes
+   // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
+   "version": "0.2.0",
+   "configurations": [
+        {
+            "name": ".NET Core Launch (console) - Analytics API",
+            "type": "coreclr",
+            "request": "launch",
+            // "preLaunchTask": "build analytics",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/Analance.Analytics.API/bin/Debug/netcoreapp3.1/Analance.Analytics.API.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Analance.Analytics.API",
+            // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
+            "console": "externalTerminal",
+            "requireExactSource": false,
+            "stopAtEntry": false
+        },
+        {
+            "name": ".NET Core Launch (console) - Foundation API",
+            "type": "coreclr",
+            "request": "launch",
+            // "preLaunchTask": "build foundation",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/Analance.Foundation.API/bin/Debug/netcoreapp3.1/Analance.Foundation.API.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Analance.Foundation.API",
+            // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
+            "console": "externalTerminal",
+            "requireExactSource": false,
+            "stopAtEntry": false
+        },
+        {
+            "name": ".NET Core Launch (console) - Gateway",
+            "type": "coreclr",
+            "request": "launch",
+            // "preLaunchTask": "build gateway",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/Analance.Gateway/bin/Debug/netcoreapp3.1/Analance.Gateway.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Analance.Gateway",
+            // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
+            "console": "externalTerminal",
+            "requireExactSource": false,
+            "stopAtEntry": false
+        },
+        {
+            "name": ".NET Core Launch (console) - Authentication API",
+            "type": "coreclr",
+            "request": "launch",
+            // "preLaunchTask": "build authentication",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/Analance.Authentication.API/bin/Debug/netcoreapp3.1/Analance.Authentication.API.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Analance.Authentication.API",
+            // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
+            "console": "externalTerminal",
+            "requireExactSource": false,
+            "stopAtEntry": false
+        },
+        {
+            "name": ".NET Core Launch (console) - Reporting API",
+            "type": "coreclr",
+            "request": "launch",
+            // "preLaunchTask": "build reporting",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/Analance.Reporting.API/bin/Debug/netcoreapp3.1/Analance.Reporting.API.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Analance.Reporting.API",
+            // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
+            "console": "externalTerminal",
+            "requireExactSource": false,
+            "stopAtEntry": false
+        },
+        {
+            "name": ".NET Core Launch (console) - Professional API",
+            "type": "coreclr",
+            "request": "launch",
+            // "preLaunchTask": "build professional",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/Analance.Professional.API/bin/Debug/netcoreapp3.1/Analance.Professional.API.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Analance.Professional.API",
+            // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
+            "console": "externalTerminal",
+            "requireExactSource": false,
+            "stopAtEntry": false
+        },
+        {
+            "name": ".NET Core Launch (console) - Job",
+            "type": "coreclr",
+            "request": "launch",
+            // "preLaunchTask": "build job",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/Analance.Job/bin/Debug/netcoreapp3.1/Analance.Job.dll",
+            "args": ["-q", "reporting,analytics,internal"],
+            "cwd": "${workspaceFolder}/Analance.Job",
+            // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
+            "console": "externalTerminal",
+            "requireExactSource": false,
+            "stopAtEntry": false
+        },
+        {
+            "name": ".NET Core Launch (console) - DataModeling API",
+            "type": "coreclr",
+            "request": "launch",
+            // "preLaunchTask": "build datamodeling",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/Analance.DataModeling.API/bin/Debug/netcoreapp3.1/Analance.DataModeling.API.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Analance.DataModeling.API",
+            // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
+            "console": "externalTerminal",
+            "requireExactSource": false,
+            "stopAtEntry": false
+        }
+    ],
+    "compounds": [
+        {
+          "name": "Run Analance Services",
+        //   "preLaunchTask": "build all services",
+          "configurations": [
+              ".NET Core Launch (console) - Analytics API",
+              ".NET Core Launch (console) - Foundation API",
+              ".NET Core Launch (console) - Gateway",
+              ".NET Core Launch (console) - Authentication API",
+              ".NET Core Launch (console) - Reporting API",
+              ".NET Core Launch (console) - Professional API",
+              ".NET Core Launch (console) - Job",
+              ".NET Core Launch (console) - DataModeling API"
+            ]
+        }
+    ]
+}
